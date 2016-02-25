@@ -1,2 +1,3 @@
 name: Jozef Balun, "Hrdy" Student FIIT :)
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
