@@ -1,4 +1,0 @@
-.navbar-inverse {
-    background-color: #{{ site.color.dark }};
-    border-color: #{{ site.color.dark }};
-}

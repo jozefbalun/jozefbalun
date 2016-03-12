@@ -1,10 +1,109 @@
----
-layout: cvpage
-title: Resume
-slug: resume
----
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Resume</title>
+		<!-- link to main stylesheet -->
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/main.css">
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+        <!-- Navigation -->
+<nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Who I am</a>
+        </div>
 
-{% if site.data.skills %}
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+                  
+                    
+                      <li>
+                          <a href="/about/">About me</a>
+                      </li>
+                    
+                  
+                
+                  
+                    
+                      <li>
+                          <a href="/blog/">Blog</a>
+                      </li>
+                    
+                  
+                
+                  
+                    
+                      <li>
+                          <a href="/contact/">Contact</a>
+                      </li>
+                    
+                  
+                
+                  
+                    
+                      <li>
+                          <a href="/wp/">Web pub</a>
+                      </li>
+                    
+                  
+                
+                  
+                    
+                      <li>
+                          <a href="/cv/">Resume</a>
+                      </li>
+                    
+                  
+                
+                  
+                
+                  
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+	   <div class="content">
+	       <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h2>Resume</h2>
+                    <hr class="bottom-heading">
+                    <p class="section-subheading"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
 <section class="skills resume">
     <div class="container">
         <div class="row">
@@ -13,27 +112,87 @@ slug: resume
                 <p>I can say i’m quite good at</p>
             </div>
 
-            {% assign items = site.data.skills.skills | sort: 'percent' %}
-             {% for skill in items reversed %}
+            
+             
                 <div class="col-md-4 skillsArea">
                     <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills">
 
-                        <span class="chart skilBg" data-percent="{{ skill.percent }}">
-                            <span class="percent">{{ skill.percent }}%</span>
+                        <span class="chart skilBg" data-percent="70">
+                            <span class="percent">70%</span>
                         <canvas height="152" width="152"></canvas></span>
 
-                        <h4>{{ skill.name }}</h4>
-                        <p>{{ skill.description }}</p>
+                        <h4>HTML&CSS</h4>
+                        <p>Base for web technology development</p>
                     </div>
                 </div>
-            {% endfor %}
+            
+                <div class="col-md-4 skillsArea">
+                    <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills">
+
+                        <span class="chart skilBg" data-percent="60">
+                            <span class="percent">60%</span>
+                        <canvas height="152" width="152"></canvas></span>
+
+                        <h4>MySQL</h4>
+                        <p>Database for everyday use</p>
+                    </div>
+                </div>
+            
+                <div class="col-md-4 skillsArea">
+                    <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills">
+
+                        <span class="chart skilBg" data-percent="60">
+                            <span class="percent">60%</span>
+                        <canvas height="152" width="152"></canvas></span>
+
+                        <h4>PHP</h4>
+                        <p>This is my priority for now, php frameworks are the best ;)</p>
+                    </div>
+                </div>
+            
+                <div class="col-md-4 skillsArea">
+                    <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills">
+
+                        <span class="chart skilBg" data-percent="35">
+                            <span class="percent">35%</span>
+                        <canvas height="152" width="152"></canvas></span>
+
+                        <h4>Angularjs</h4>
+                        <p>Front-end framework for nice and speed web</p>
+                    </div>
+                </div>
+            
+                <div class="col-md-4 skillsArea">
+                    <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills">
+
+                        <span class="chart skilBg" data-percent="30">
+                            <span class="percent">30%</span>
+                        <canvas height="152" width="152"></canvas></span>
+
+                        <h4>C</h4>
+                        <p>This is mother all programming languages</p>
+                    </div>
+                </div>
+            
+                <div class="col-md-4 skillsArea">
+                    <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills">
+
+                        <span class="chart skilBg" data-percent="30">
+                            <span class="percent">30%</span>
+                        <canvas height="152" width="152"></canvas></span>
+
+                        <h4>OracleDB</h4>
+                        <p>Bussiness level database</p>
+                    </div>
+                </div>
+            
 
         </div>
     </div>
 </section>
-{% endif %}
 
-{% if site.data.works %}
+
+
 <section class="works resume">
     <div class="container">
         <div class="row">
@@ -43,31 +202,48 @@ slug: resume
             </div>
 
             <div id="builder-module-53e3b79a5bd68" class="module">
-            {% for work in site.data.works.works %}
+            
             <div class="row workDetails">
                 <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
                     <div class="workYear">
-                        {{ work.from | date: "%-d, %Y" }} <br>
-                        {{ work.to }}
+                        1, 2014 <br>
+                        Present
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
                     <div class="arrowpart"></div>
                     <div class="exCon">
-                        <h4>{{ work.company }}</h4>
-                        <h5>{{ work.position }}</h5>
-                        <p>{{ work.description }}</p>
+                        <h4>Pixwell, s.r.o.</h4>
+                        <h5>Front/Back-end Developer</h5>
+                        <p>Working in young and progresive team of developers and designers we working on interesting projects</p>
                     </div>
                 </div>
             </div>
-            {% endfor %}
+            
+            <div class="row workDetails">
+                <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
+                    <div class="workYear">
+                        1, 2015 <br>
+                        Present
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
+                    <div class="arrowpart"></div>
+                    <div class="exCon">
+                        <h4>Goldmann Systems, a.s.</h4>
+                        <h5>Junior PHP Developer</h5>
+                        <p>We Develop new internal product for bank clients and support current product</p>
+                    </div>
+                </div>
+            </div>
+            
 
         </div>
     </div>
 </section>
-{% endif %}
 
-{% if site.data.educations %}
+
+
 <section class="educations resume">
     <div class="container">
         <div class="row">
@@ -77,26 +253,118 @@ slug: resume
             </div>
 
             <div id="builder-module-53e3b79a5bd68" class="module">
-            {% for education in site.data.educations.educations %}
+            
             <div class="row workDetails">
                 <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
                     <div class="workYear">
-                        {{ education.from | date: "%-d, %Y" }} <br>
-                        {{ education.to | date: "%-d, %Y" }}
+                        1, 2013 <br>
+                        1, 2016
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
                     <div class="arrowpart"></div>
                     <div class="exCon">
-                        <h4>{{ education.degree }}</h4>
-                        <h5>{{ education.uni }}</h5>
-                        <p>{{ education.description }}</p>
+                        <h4>Bachelor degree</h4>
+                        <h5>FIIT STU BA</h5>
+                        <p>This school is good only one thing, show you many posibilities</p>
                     </div>
                 </div>
             </div>
-            {% endfor %}
+            
+            <div class="row workDetails">
+                <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
+                    <div class="workYear">
+                        1, 2010 <br>
+                        1, 2013
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
+                    <div class="arrowpart"></div>
+                    <div class="exCon">
+                        <h4>Graduation</h4>
+                        <h5>SPS Handlová</h5>
+                        <p>Four years which show me based on many things</p>
+                    </div>
+                </div>
+            </div>
+            
 
         </div>
     </div>
 </section>
-{% endif %}
+
+
+
+	   </div>
+
+        <footer>
+    <div class="container footer-top">
+        <div class="row">
+            <div class="footer-col col-md-4">
+                <h3></h3>
+                <p>
+                    
+                </p>
+            </div>
+            <div class="footer-col col-md-4">
+                <h3>Follow me</h3>
+                <ul class="list-inline">
+                    
+                    <li>
+                        <a href="https://www.facebook.com/vpjozef" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://bitbucket.org/balunjozef" class="btn-social btn-outline"><i class="fa fa-fw fa-bitbucket"></i></a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://github.com/jozefbalun" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="footer-col col-md-4">
+                <h3></h3>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 bottom-footer">
+                    <p>Copyright © Who I am 2016 </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</footer>
+
+        <script src="/js/jquery-1.12.1.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/easypiechart.min.js"></script>
+<script src="/js/plugins.js"></script>
+
+<script>
+    $(function() {
+        $('.chart').easyPieChart({
+            easing: 'easeOutBounce',
+            scaleColor: false,
+            lineWidth: 7,
+            size: 150,
+            barColor: "#fed136",
+            trackColor: "#fff",
+            onStep: function(from, to, percent) {
+                $(this.el).find('.percent').text(Math.round(percent));
+            }
+        });
+    });
+</script>
+
+
+	</body>
+</html>
