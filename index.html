@@ -1,8 +1,25 @@
 ---
 layout: default
-title: Jozef Balun, "Hrdy" Student FIIT
 ---
-<div class="blurb">
-	<h1>Hi there, I'm Jozef Balun!</h1>
-	<p>I'm best <em>Student</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-</div><!-- /.blurb --> 
+
+<div class="homepage-hero-module">
+    <div class="video-container">
+        <div class="filter"></div>
+        <video autoplay loop class="fillWidth">
+            <source src="assets/MP4/Aloha-Mundo.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+            <source src="/assets/WEBM/Aloha-Mundo.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+        </video>
+        <div class="poster hidden">
+            <img src="/assets/Snapshots/Aloha-Mundo.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+<div id="home" class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>I'm {{ site.name }}</h1>
+            <h2>I'm the best <em>Student</em> Don't trust me. <a href="/about">Read more</a></h2>
+        </div>
+    </div>
+</div>

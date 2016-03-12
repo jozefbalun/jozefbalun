@@ -1,0 +1,19 @@
+{
+   "works":
+   [
+      {
+        "from": "01-07-2014",
+        "to": "Present",
+        "company": "Pixwell, s.r.o.",
+        "position": "Front/Back-end Developer",
+        "description": "Working in young and progresive team of developers and designers we working on interesting projects"
+      },
+      {
+        "from": "01-06-2015",
+        "to": "Present",
+        "company": "Goldmann Systems, a.s.",
+        "position": "Junior PHP Developer",
+        "description": "We Develop new internal product for bank clients and support current product"
+      }
+   ]
+}

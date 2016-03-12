@@ -1,0 +1,19 @@
+{
+   "educations":
+   [
+      {
+        "from": "01-09-2013",
+        "to": "01-06-2016",
+        "degree": "Bachelor degree",
+        "uni": "FIIT STU BA",
+        "description": "This school is good only one thing, show you many posibilities"
+      },
+      {
+        "from": "01-09-2010",
+        "to": "01-06-2013",
+        "degree": "Graduation",
+        "uni": "SPS Handlová",
+        "description": "Four years which show me based on many things"
+      }
+   ]
+}
