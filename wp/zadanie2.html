@@ -1,0 +1,54 @@
+---
+layout: page
+title: Web pub Zadanie 2 - DocBook
+slug: web-pub-zadanie-2
+description: Create docbook xml
+nav: false
+---
+
+<p>
+    Cielom zadania bolo spracovanie casti balkalarskej prace z povodneho formatu v mojom pripade Word, do formatu DocBook a nasledne vygenerovanie dokumentu vo formate PDF.
+</p>
+
+<p>
+    V zadani sme vyuzivali predpripravenu sablonu, ktrora pretvara klasicky styl Docbooku typu book na format aku ma definovana Zaverecna praca Bakalarskeho projektu.
+    Sablonu sme si upravili oweridnutim niektorych casti napriklad cislovanie sekcii a kapitol z povodneho formatu
+    <xmp>
+        <xsl:template name="chapappendix.title">
+          <xsl:param name="node" select="."/>
+          <xsl:variable name="id">
+            <xsl:call-template name="object.id">
+              <xsl:with-param name="object" select="$node"/>
+            </xsl:call-template>
+          </xsl:variable>
+          <fo:block xsl:use-attribute-sets="chap.title.properties">
+            <xsl:apply-templates select="$node" mode="label.markup"/>
+        <xsl:text>. </xsl:text>
+            <xsl:apply-templates select="$node" mode="title.markup"/>
+          </fo:block>
+        </xsl:template>
+    </xmp>
+</p>
+<p>
+    podobne sme pridali generovanie zoznamu tabuliek a obrazkov
+
+    <xmp>
+        <xsl:param name="generate.toc">
+            book      title,toc,figure,table
+        </xsl:param>
+    </xmp>
+</p>
+
+<p>
+    Poziadavkov zadanie bolo vytvorenie Indexu ked sa zobrazuju pojmy a ich vyskyty v dokumente
+
+    <xmp>
+        <indexterm><primary>Pojem1</primary><secondary>Pod pojem</secondary></indexterm>
+    </xmp>
+</p>
+
+<p>
+    Kedze vzdy treba pamatat aj na ludi, ktory mozno do probllematiky nerozumenju dolezitou sucastou Slovnik kde su vysvetlene sktratky pouzivane v dokumente
+</p>
+
+
