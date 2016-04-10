@@ -1,3 +1,16 @@
+---
+
+---
+
 body {
-    outline: 1px red solid;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+
+@import "_navbar";
+@import "_pager";
+
+@import "_home";
+@import "_about";
+@import "_layout-post";
+
+@import "_footer";

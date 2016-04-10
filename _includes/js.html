@@ -1,0 +1,20 @@
+<script src="/js/jquery-1.12.1.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/easypiechart.min.js"></script>
+<script src="/js/plugins.js"></script>
+
+<script>
+    $(function() {
+        $('.chart').easyPieChart({
+            easing: 'easeOutBounce',
+            scaleColor: false,
+            lineWidth: 7,
+            size: 150,
+            barColor: "#fed136",
+            trackColor: "#fff",
+            onStep: function(from, to, percent) {
+                $(this.el).find('.percent').text(Math.round(percent));
+            }
+        });
+    });
+</script>

@@ -1,0 +1,35 @@
+{
+   "skills":
+   [
+      {
+         "name": "PHP",
+         "percent": "60",
+         "description": "This is my priority for now, php frameworks are the best ;)"
+      },
+      {
+         "name": "Angularjs",
+         "percent": "35",
+         "description": "Front-end framework for nice and speed web"
+      },
+      {
+         "name": "MySQL",
+         "percent": "60",
+         "description": "Database for everyday use"
+      },
+      {
+         "name": "OracleDB",
+         "percent": "30",
+         "description": "Bussiness level database"
+      },
+      {
+         "name": "C",
+         "percent": "30",
+         "description": "This is mother all programming languages"
+      },
+      {
+         "name": "HTML&CSS",
+         "percent": "70",
+         "description": "Base for web technology development"
+      }
+   ]
+}

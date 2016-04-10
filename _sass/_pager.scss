@@ -1,0 +1,16 @@
+.pager li>a, .pager li>span {
+    display: inline-block;
+    padding: 5px 14px;
+    background-color: #fed136;
+    border: 1px solid #fed136;
+    color: #fff;
+    border-radius: 0;
+}
+
+.pager li>a:hover {
+
+    background-color: #fec503;
+    border: 1px solid #fec503;
+    color: #fff;
+    border-radius: 0;
+}
