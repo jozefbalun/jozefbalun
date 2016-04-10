@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Web pub Zadanie 2 - DocBook</title>
+		<!-- link to main stylesheet -->
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/main.css">
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+        <!-- Navigation -->
+<nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Who I am</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+                  
+                    
+                      <li>
+                          <a href="/about/">About me</a>
+                      </li>
+                    
+                  
+                
+                  
+                    
+                      <li>
+                          <a href="/blog/">Blog</a>
+                      </li>
+                    
+                  
+                
+                  
+                    
+                      <li>
+                          <a href="/contact/">Contact</a>
+                      </li>
+                    
+                  
+                
+                  
+                
+                  
+                    
+                      <li>
+                          <a href="/wp/">Web pub</a>
+                      </li>
+                    
+                  
+                
+                  
+                    
+                      <li>
+                          <a href="/cv/">Resume</a>
+                      </li>
+                    
+                  
+                
+                  
+                
+                  
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+	   <div class="content">
+	       <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h2>Web pub Zadanie 2 - DocBook</h2>
+                    <hr class="bottom-heading">
+                    <p class="section-subheading">Create docbook xml</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div id="web-pub-zadanie-2" class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
+            <p>
+    Cielom zadania bolo spracovanie casti balkalarskej prace z povodneho formatu v mojom pripade Word, do formatu DocBook a nasledne vygenerovanie dokumentu vo formate PDF.
+</p>
+
+<p>
+    V zadani sme vyuzivali predpripravenu sablonu, ktrora pretvara klasicky styl Docbooku typu book na format aku ma definovana Zaverecna praca Bakalarskeho projektu.
+    Sablonu sme si upravili oweridnutim niektorych casti napriklad cislovanie sekcii a kapitol z povodneho formatu
+    <xmp>
+        <xsl:template name="chapappendix.title">
+          <xsl:param name="node" select="."/>
+          <xsl:variable name="id">
+            <xsl:call-template name="object.id">
+              <xsl:with-param name="object" select="$node"/>
+            </xsl:call-template>
+          </xsl:variable>
+          <fo:block xsl:use-attribute-sets="chap.title.properties">
+            <xsl:apply-templates select="$node" mode="label.markup"/>
+        <xsl:text>. </xsl:text>
+            <xsl:apply-templates select="$node" mode="title.markup"/>
+          </fo:block>
+        </xsl:template>
+    </xmp>
+</p>
+<p>
+    podobne sme pridali generovanie zoznamu tabuliek a obrazkov
+
+    <xmp>
+        <xsl:param name="generate.toc">
+            book      title,toc,figure,table
+        </xsl:param>
+    </xmp>
+</p>
+
+<p>
+    Poziadavkov zadanie bolo vytvorenie Indexu ked sa zobrazuju pojmy a ich vyskyty v dokumente
+
+    <xmp>
+        <indexterm><primary>Pojem1</primary><secondary>Pod pojem</secondary></indexterm>
+    </xmp>
+</p>
+
+<p>
+    Kedze vzdy treba pamatat aj na ludi, ktory mozno do probllematiky nerozumenju dolezitou sucastou Slovnik kde su vysvetlene sktratky pouzivane v dokumente
+</p>
+
+<p>
+  Najvacsi probelm, ktory sa mi aj tak uplne nepodarilo odstranit bolo s pismom.
+  Pracoval som na virtualnom stroji windows 8.1 a pri transformacii xml do pdf som mal warning ohladom pisma Helvetica, ktory transformator nevedel najst.
+  Problem som z casti vyriesil pridanim pisma Times New Roman do sablonoveho xml suboru.
+</p>
+
+<p>
+  UPOZORNENIE - odovzdany subor nema presne vyzadovane pomenovanie
+</p>
+
+
+        </div>
+    </div>
+</div>
+
+	   </div>
+
+        <footer>
+    <div class="container footer-top">
+        <div class="row">
+            <div class="footer-col col-md-4">
+                <h3></h3>
+                <p>
+                    
+                </p>
+            </div>
+            <div class="footer-col col-md-4">
+                <h3>Follow me</h3>
+                <ul class="list-inline">
+                    
+                    <li>
+                        <a href="https://www.facebook.com/vpjozef" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://bitbucket.org/balunjozef" class="btn-social btn-outline"><i class="fa fa-fw fa-bitbucket"></i></a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://github.com/jozefbalun" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="footer-col col-md-4">
+                <h3></h3>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 bottom-footer">
+                    <p>Copyright © Who I am 2016 </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</footer>
+
+        <script src="/js/jquery-1.12.1.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/easypiechart.min.js"></script>
+<script src="/js/plugins.js"></script>
+
+<script>
+    $(function() {
+        $('.chart').easyPieChart({
+            easing: 'easeOutBounce',
+            scaleColor: false,
+            lineWidth: 7,
+            size: 150,
+            barColor: "#fed136",
+            trackColor: "#fff",
+            onStep: function(from, to, percent) {
+                $(this.el).find('.percent').text(Math.round(percent));
+            }
+        });
+    });
+</script>
+
+
+	</body>
+</html>
