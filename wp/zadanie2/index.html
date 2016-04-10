@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>About me</title>
+		<title>Web pub Zadanie 2 - DocBook</title>
 		<!-- link to main stylesheet -->
         <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="/css/main.css">
@@ -96,9 +96,9 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="site-heading">
-                    <h2>About me</h2>
+                    <h2>Web pub Zadanie 2 - DocBook</h2>
                     <hr class="bottom-heading">
-                    <p class="section-subheading">This is me</p>
+                    <p class="section-subheading">Create docbook xml</p>
                 </div>
             </div>
         </div>
@@ -106,36 +106,54 @@
 </header>
 
 <!-- Main Content -->
-<div id="about" class="container">
+<div id="web-pub-zadanie-2" class="container">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
-            <h4>Personal</h4>
-<p>
-V jeden krasny jarny den, ked pupavy otoclili svoje hlavky k slniecku a sykorka vyletela osviesit sa v zblnkotajucom potociku, prisiel na svet... ale nie robim si srandu :)
+            <p>
+    Cielom zadania bolo spracovanie casti balkalarskej prace z povodneho formatu v mojom pripade Word, do formatu DocBook a nasledne vygenerovanie dokumentu vo formate PDF.
 </p>
 
-<h4>Profesional</h4>
 <p>
-Oblast informatiky a prve riadku kodu som napisal este na strednej skole a uz vtedy som pomaly zistoval ze webove technologie su to prave pre mna. Venujem sa im dodnes samozrejme za tie roky sa aj moje vedomosti a skusenosti posunuli dopredu.
+    V zadani sme vyuzivali predpripravenu sablonu, ktrora pretvara klasicky styl Docbooku typu book na format aku ma definovana Zaverecna praca Bakalarskeho projektu.
+    Sablonu sme si upravili oweridnutim niektorych casti napriklad cislovanie sekcii a kapitol z povodneho formatu
+    <xmp>
+        <xsl:template name="chapappendix.title">
+          <xsl:param name="node" select="."/>
+          <xsl:variable name="id">
+            <xsl:call-template name="object.id">
+              <xsl:with-param name="object" select="$node"/>
+            </xsl:call-template>
+          </xsl:variable>
+          <fo:block xsl:use-attribute-sets="chap.title.properties">
+            <xsl:apply-templates select="$node" mode="label.markup"/>
+        <xsl:text>. </xsl:text>
+            <xsl:apply-templates select="$node" mode="title.markup"/>
+          </fo:block>
+        </xsl:template>
+    </xmp>
+</p>
+<p>
+    podobne sme pridali generovanie zoznamu tabuliek a obrazkov
 
-<h5>Projekty: </h5>
-<ul>
-    <li>Bakalarsky projekt - Predpovedanie dopytov do vyhladavaia</li>
-    <li>UDP chat</li>
-    <li>Grafove algoritmi</li>
-</ul>
+    <xmp>
+        <xsl:param name="generate.toc">
+            book      title,toc,figure,table
+        </xsl:param>
+    </xmp>
 </p>
 
-<h4>Hobbies</h4>
-<ul>
-    <li>Bicykel</li>
-    <li>Korcule</li>
-    <li>Snowboard</li>
-    <li>Turistika</li>
-</ul>
 <p>
-Aj ked velneho casu vela nie je predsa si dokazem najst cas a stravit pekny den s priatelmi na bicykli alebo si vyrazime na laser tag alebo inu pohybovu aktivitu.
+    Poziadavkov zadanie bolo vytvorenie Indexu ked sa zobrazuju pojmy a ich vyskyty v dokumente
+
+    <xmp>
+        <indexterm><primary>Pojem1</primary><secondary>Pod pojem</secondary></indexterm>
+    </xmp>
 </p>
+
+<p>
+    Kedze vzdy treba pamatat aj na ludi, ktory mozno do probllematiky nerozumenju dolezitou sucastou Slovnik kde su vysvetlene sktratky pouzivane v dokumente
+</p>
+
 
 
         </div>
