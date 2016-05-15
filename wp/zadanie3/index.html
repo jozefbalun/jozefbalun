@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Web pub</title>
+		<title>Web pub Zadanie 2 - DocBook</title>
 		<!-- link to main stylesheet -->
         <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="/css/main.css">
@@ -96,9 +96,9 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="site-heading">
-                    <h2>Web pub</h2>
+                    <h2>Web pub Zadanie 3 - Transformacie</h2>
                     <hr class="bottom-heading">
-                    <p class="section-subheading">Projects of web pub</p>
+                    <p class="section-subheading">Create presentation xhtml & pdf</p>
                 </div>
             </div>
         </div>
@@ -106,13 +106,58 @@
 </header>
 
 <!-- Main Content -->
-<div id="web-pub" class="container">
+<div id="web-pub-zadanie-2" class="container">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
-            <ul>
-    <li><a href="./zadanie2">Zadanie 2</a></li>
-    <li><a href="./zadanie3">Zadanie 3</a></li>
-</ul>
+            <p>
+    Cielom zadania bolo vytvorit navrh prezentacie v html a pdf. Vhodne navrhnut transformacie a styly.
+</p>
+
+<p>
+    V zadani sme vyuzivali xsl prvky ako xpath, xinclude, xlink. Navrhli sme jeden globalny trasformacny subor. a nasledne ku kazdej transformacii zvlast. Kde sme overidovali templaty z globalneho suboru a prisposobali obsah ku konkretnemu vystupu.
+</p>
+<p>
+    V ramci prezentacie je mozne vytvarat jednotlive slidy
+    <pre class="highlight">
+        <code>
+            <span class="nt">&lt;slideshow&gt;</span>
+            <span class="nt">&lt;slide&gt;</span>
+            <span class="nt">&lt;/slide&gt;</span>
+            <span class="nt">&lt;/slideshow&gt;</span>
+        </code>
+    </pre>
+</p>
+
+<p>
+    pomocov atribributu <code>colorScheme</code> vieme zvolit jednu z farebnych tem
+    <ul>
+        <li><code>green-white</code></li>
+        <li><code>red-white</code></li>
+        <li><code>orange-white</code></li>
+        <li><code>blue-white</code></li>
+        <li><code>purple-white</code></li>
+    </ul>
+</p>
+
+<p>
+   dolezitym prvkom je <code>block</code>, ktory obsahuje atribut <code>col</code> kde mozeme definovat pocest stlpcov slidu (1 | 2 | 3).
+   V ramci bloku sa mozu vyskytovat artibuty ako:
+   <pre class="highlight">
+        <code>
+            <span class="nt">&lt;para&gt; &lt;/para&gt;</span>
+            <span class="nt">&lt;ico&gt; &lt;/ico&gt;</span>
+            <span class="nt">&lt;num-list&gt; &lt;/num-list&gt;</span>
+            <span class="nt">&lt;dotted-list&gt; &lt;/dotted-list&gt;</span>
+        </code>
+    </pre>
+    tymto elementol mozeme nastavovat atributy ako <code>align</code> (left | center | right | justify)
+    alebo <code>size</code> kde v % zadavame velkost fontu
+</p>
+
+<p>
+ Specialnym atrubutom <code>type</code> v elememente <code>block</code> vieme definovat tkz. karty. pre viac info pozri zdrojovy kod.
+</p>
+
 
         </div>
     </div>
